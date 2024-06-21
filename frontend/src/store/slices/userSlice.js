@@ -60,7 +60,7 @@ export const signup = (email, password) => async (dispatch) => {
   dispatch(userSlice.actions.registerRequest());
   try {
     const { data } = await axios.post(
-      "http://localhost:4000/api/v1/user/register",
+      "https://cyber-security-lab.onrender.com/api/v1/user/register",
       { email, password },
       { withCredentials: true, headers: { "Content-Type": "application/json" } }
     );
@@ -75,7 +75,7 @@ export const login = (email, password) => async (dispatch) => {
   dispatch(userSlice.actions.loginRequest());
   try {
     const { data } = await axios.post(
-      "http://localhost:4000/api/v1/user/login",
+      "https://cyber-security-lab.onrender.com/api/v1/user/login",
       { email, password },
       { withCredentials: true, headers: { "Content-Type": "application/json" } }
     );
